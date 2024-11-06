@@ -1,5 +1,5 @@
 # 50-programas
-#Gist con los 50 programas https://gist.github.com/GODGonzaloMR/9f0602596ec4ad1c6d638a1ca091516d
+# Gist con los 50 programas https://gist.github.com/GODGonzaloMR/9f0602596ec4ad1c6d638a1ca091516d
 - Gonzalo Cortez Huerta 22210761
 # 1.- Convertir temperatura de Celsius a Fahrenheit	
 ## nano celsius_a_fahrenheit.s
