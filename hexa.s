@@ -1,3 +1,30 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que convierte de hexadecimal a decimal
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+
+class HexadecimalToDecimal
+{
+    // Importar la función de conversión en ensamblador si decides usarla
+    [DllImport("hexa.so")]
+    public static extern int HexToDec(string hex);
+
+    static void Main()
+    {
+        Console.Write("Introduce un número hexadecimal: ");
+        string hexNumber = Console.ReadLine(); // Leer el número hexadecimal
+        
+        // Convertir a decimal usando la función en C#
+        int decimalNumber = Convert.ToInt32(hexNumber, 16);
+        
+        Console.WriteLine($"El número decimal es: {decimalNumber}");
+    }
+}
+*/
 // hexa.s - Convierte un carácter hexadecimal en decimal (simplificado)
 
 .global hex_char_to_dec
