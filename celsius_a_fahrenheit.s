@@ -4,7 +4,29 @@
 
 // Equivalente en C#:
 /*
+using System;
+using System.Runtime.InteropServices;
 
+class Program
+{
+    // Importar la función celsius_a_fahrenheit de la biblioteca compartida
+    [DllImport("libcelsius.so")]
+    public static extern long celsius_a_fahrenheit(long celsius);
+
+    static void Main()
+    {
+        Console.Write("Ingresa la temperatura en Celsius: ");
+        if (long.TryParse(Console.ReadLine(), out long celsius))
+        {
+            long fahrenheit = celsius_a_fahrenheit(celsius);
+            Console.WriteLine($"{celsius}°C es igual a {fahrenheit}°F");
+        }
+        else
+        {
+            Console.WriteLine("Entrada no válida.");
+        }
+    }
+}
 */
 .section .data
 .section .text
