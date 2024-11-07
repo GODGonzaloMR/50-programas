@@ -1,3 +1,72 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que hace una secuencia en FIBONACCI
+
+// Equivalente en C#:
+/*
+using System;
+
+class Program
+{
+    static void MostrarSecuenciaFibonacci(int n)
+    {
+        if (n < 0)
+        {
+            Console.WriteLine("Por favor ingrese un número no negativo.");
+            return;
+        }
+
+        Console.WriteLine($"\nSecuencia de Fibonacci hasta el término {n}:");
+        Console.Write("0");  // Primer término
+
+        if (n == 0) 
+        {
+            Console.WriteLine();
+            return;
+        }
+
+        long prev = 0;
+        long current = 1;
+        
+        Console.Write(" → 1");  // Segundo término
+
+        for (int i = 2; i <= n; i++)
+        {
+            try
+            {
+                long next = checked(prev + current);  // Usar checked para detectar overflow
+                Console.Write($" → {next}");
+                prev = current;
+                current = next;
+            }
+            catch (OverflowException)
+            {
+                Console.WriteLine("\n\nEl cálculo ha excedido el límite de números manejables.");
+                break;
+            }
+        }
+        Console.WriteLine("\n");
+    }
+
+    static void Main()
+    {
+        while (true)
+        {
+            Console.Write("Ingrese el número de términos de Fibonacci a mostrar (0 para salir): ");
+            
+            if (int.TryParse(Console.ReadLine(), out int n))
+            {
+                if (n == 0) break;
+                MostrarSecuenciaFibonacci(n);
+            }
+            else
+            {
+                Console.WriteLine("Por favor ingrese un número válido.");
+            }
+        }
+    }
+}
+*/
 .section .data
 .section .text
 .global fibonacci
