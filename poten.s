@@ -1,3 +1,33 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que calcula la potencia de los numeros
+//  Potencia (x^n)
+
+// Equivalente en C#:
+/*
+// poten.cs - C# para invocar el ensamblador ARM64 y calcular la potencia x^n
+using System;
+using System.Runtime.InteropServices;
+
+class Program
+{
+    // Importar la función potencia desde el archivo ensamblador
+    [DllImport("poten.so", EntryPoint = "potencia")]
+    private static extern long Potencia(long x, long n);
+
+    static void Main()
+    {
+        Console.WriteLine("Introduce la base y el exponente:");
+        Console.Write("Base (x): ");
+        long x = Convert.ToInt64(Console.ReadLine());
+        Console.Write("Exponente (n): ");
+        long n = Convert.ToInt64(Console.ReadLine());
+
+        long result = Potencia(x, n);
+        Console.WriteLine($"{x}^{n} es: {result}");
+    }
+}
+*/
 // poten.s - Ensamblador ARM64 para calcular la potencia x^n
 
 .global potencia
