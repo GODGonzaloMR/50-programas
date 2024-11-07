@@ -1,3 +1,30 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que hace una Conversión de ASCII a entero
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+
+class AsciiConversion
+{
+    // Importar la función de ensamblador
+    [DllImport("libcalculations.so")]
+    public static extern int ascii_a_entero(string cadena);
+
+    static void Main()
+    {
+        Console.Write("Ingrese una cadena numérica: ");
+        string cadena = Console.ReadLine();
+
+        // Llamada a la función de ensamblador para la conversión
+        int numero = ascii_a_entero(cadena);
+
+        Console.WriteLine($"El número entero es: {numero}");
+    }
+}
+*/
 // ascii.s - Conversión de ASCII a entero
 // Entrada: Puntero a la cadena de entrada (en x0)
 // Salida: El entero convertido en w0
