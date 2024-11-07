@@ -1,3 +1,122 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que Implementa una cola usando un arreglo
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+
+class Program
+{
+    // Importar funciones del ensamblador
+    [DllImport("cola.so", EntryPoint = "init_cola")]
+    private static extern void InitCola();
+
+    [DllImport("cola.so", EntryPoint = "enqueue")]
+    private static extern long Enqueue(long value);
+
+    [DllImport("cola.so", EntryPoint = "dequeue")]
+    private static extern long Dequeue();
+
+    [DllImport("cola.so", EntryPoint = "is_empty")]
+    private static extern int IsEmpty();
+
+    [DllImport("cola.so", EntryPoint = "is_full")]
+    private static extern int IsFull();
+
+    static void Main()
+    {
+        InitCola();
+        int opcion;
+
+        do
+        {
+            Console.WriteLine("\nMenú Cola:");
+            Console.WriteLine("1. Encolar (Enqueue)");
+            Console.WriteLine("2. Desencolar (Dequeue)");
+            Console.WriteLine("3. Verificar si está vacía");
+            Console.WriteLine("4. Verificar si está llena");
+            Console.WriteLine("0. Salir");
+            Console.Write("Seleccione una opción: ");
+            
+            if (int.TryParse(Console.ReadLine(), out opcion))
+            {
+                switch (opcion)
+                {
+                    case 1:
+                        Console.Write("Ingrese el valor a encolar: ");
+                        if (long.TryParse(Console.ReadLine(), out long valor))
+                        {
+                            long resultado = Enqueue(valor);
+                            if (resultado == -1)
+                            {
+                                Console.WriteLine("Error: La cola está llena.");
+                            }
+                            else
+                            {
+                                Console.WriteLine($"Valor {valor} encolado exitosamente.");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Error: Ingrese un número válido.");
+                        }
+                        break;
+
+                    case 2:
+                        long valorDesencolado = Dequeue();
+                        if (valorDesencolado == -1)
+                        {
+                            Console.WriteLine("Error: La cola está vacía.");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Valor desencolado: {valorDesencolado}");
+                        }
+                        break;
+
+                    case 3:
+                        if (IsEmpty() == 1)
+                        {
+                            Console.WriteLine("La cola está vacía.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("La cola no está vacía.");
+                        }
+                        break;
+
+                    case 4:
+                        if (IsFull() == 1)
+                        {
+                            Console.WriteLine("La cola está llena.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("La cola no está llena.");
+                        }
+                        break;
+
+                    case 0:
+                        Console.WriteLine("Saliendo del programa...");
+                        break;
+
+                    default:
+                        Console.WriteLine("Opción no válida.");
+                        break;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Error: Ingrese un número válido.");
+                opcion = -1;
+            }
+
+        } while (opcion != 0);
+    }
+}
+*/
 .data
     .align 3                    // Alineamiento a 8 bytes
     queue_array: .skip 800      // Espacio para 100 elementos de 8 bytes
