@@ -1,3 +1,43 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que verifica si una cadena es palíndromo
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+using System.Text;
+
+class Program
+{
+    // Importar la función de verificación de palíndromo desde la biblioteca compartida
+    [DllImport("libcalculations.so")]
+    public static extern int es_palindromo(StringBuilder str);
+
+    static void Main()
+    {
+        // Pedir al usuario que ingrese una cadena
+        Console.Write("Ingresa una cadena para verificar si es palíndromo: ");
+        string input = Console.ReadLine();
+
+        // Convertir la cadena a StringBuilder (mutable)
+        StringBuilder cadena = new StringBuilder(input);
+
+        // Llamar a la función para verificar si es palíndromo
+        int resultado = es_palindromo(cadena);
+
+        // Mostrar el resultado
+        if (resultado == 1)
+        {
+            Console.WriteLine($"\"{input}\" es un palíndromo.");
+        }
+        else
+        {
+            Console.WriteLine($"\"{input}\" no es un palíndromo.");
+        }
+    }
+}
+*/
 .section .data
 .section .text
 .global es_palindromo
