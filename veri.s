@@ -1,3 +1,43 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que Verifica si un número es Armstrong
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+
+class Program 
+{
+    // Importar la función de ensamblador
+    [DllImport("veri.so")]
+    public static extern int EsArmstrong(int numero);
+
+    static void Main()
+    {
+        try
+        {
+            Console.Write("Introduce un número: ");
+            if (int.TryParse(Console.ReadLine(), out int numero))
+            {
+                int resultado = EsArmstrong(numero);
+                if (resultado == 1)
+                    Console.WriteLine($"{numero} es un número Armstrong.");
+                else
+                    Console.WriteLine($"{numero} no es un número Armstrong.");
+            }
+            else
+            {
+                Console.WriteLine("Por favor ingresa un número válido.");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+    }
+}
+*/
 .global EsArmstrong
     
 // x0: número de entrada
