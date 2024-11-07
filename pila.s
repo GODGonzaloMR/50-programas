@@ -1,3 +1,94 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que Implementa una pila usando un arreglo
+
+// Equivalente en C#:
+/*
+// pila.cs - C# para invocar el ensamblador ARM64 y manejar una pila
+using System;
+using System.Runtime.InteropServices;
+
+class Program
+{
+    // Importar las funciones desde el ensamblador
+    [DllImport("pila.so", EntryPoint = "init_pila")]
+    private static extern void InitPila();
+
+    [DllImport("pila.so", EntryPoint = "push")]
+    private static extern long Push(long value);
+
+    [DllImport("pila.so", EntryPoint = "pop")]
+    private static extern long Pop();
+
+    [DllImport("pila.so", EntryPoint = "is_empty")]
+    private static extern int IsEmpty();
+
+    static void Main()
+    {
+        InitPila();
+        int option;
+
+        do
+        {
+            Console.WriteLine("\nMenu:");
+            Console.WriteLine("1. Apilar");
+            Console.WriteLine("2. Desapilar");
+            Console.WriteLine("3. Verificar si la pila está vacía");
+            Console.WriteLine("0. Salir");
+            Console.Write("Seleccione una opción: ");
+            option = Convert.ToInt32(Console.ReadLine());
+
+            switch (option)
+            {
+                case 1:
+                    Console.Write("Ingrese un valor a apilar: ");
+                    long value = Convert.ToInt64(Console.ReadLine());
+                    long result = Push(value);
+                    if (result == -1)
+                    {
+                        Console.WriteLine("Error: Desbordamiento de pila.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{value} apilado.");
+                    }
+                    break;
+
+                case 2:
+                    long poppedValue = Pop();
+                    if (poppedValue == -1)
+                    {
+                        Console.WriteLine("Error: Pila vacía.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Desapilado: {poppedValue}");
+                    }
+                    break;
+
+                case 3:
+                    if (IsEmpty() == 1)
+                    {
+                        Console.WriteLine("La pila está vacía.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("La pila no está vacía.");
+                    }
+                    break;
+
+                case 0:
+                    Console.WriteLine("Saliendo...");
+                    break;
+
+                default:
+                    Console.WriteLine("Opción no válida.");
+                    break;
+            }
+        } while (option != 0);
+    }
+}
+*/
 .data
     // Estructura de datos para la pila
     .align 3                    // Alineamiento a 8 bytes
