@@ -1,3 +1,26 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que Lee entradas desde el teclado
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+
+class Program
+{
+    // Declaración de la función externa
+    [DllImport("leer.so", CallingConvention = CallingConvention.Cdecl)]
+    public static extern long LeerEntrada();
+
+    static void Main()
+    {
+        Console.WriteLine("Introduce un número:");
+        long numero = LeerEntrada();
+        Console.WriteLine($"Número leído: {numero}");
+    }
+}
+*/
 .global LeerEntrada
 
 LeerEntrada:
