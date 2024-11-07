@@ -1,3 +1,36 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que invierte una cadena
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+using System.Text;
+
+class Program
+{
+    // Importar la función de invertir cadena desde la biblioteca compartida
+    [DllImport("libcalculations.so")]
+    public static extern void invertir_cadena(StringBuilder str);
+
+    static void Main()
+    {
+        // Pedir al usuario que ingrese una cadena
+        Console.Write("Ingresa una cadena para invertir: ");
+        string input = Console.ReadLine();
+
+        // Convertir la cadena a StringBuilder (mutable)
+        StringBuilder cadena = new StringBuilder(input);
+
+        // Llamar a la función para invertir la cadena
+        invertir_cadena(cadena);
+
+        // Mostrar la cadena invertida
+        Console.WriteLine($"Cadena invertida: {cadena}");
+    }
+}
+*/
 .section .data
 .section .text
 .global invertir_cadena
