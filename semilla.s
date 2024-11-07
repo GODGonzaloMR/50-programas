@@ -1,3 +1,35 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que hace Generación de números aleatorios (con semilla)
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+
+class RandomGenerator
+{
+    // Importar la función de ensamblador para generar un número pseudoaleatorio
+    [DllImport("semilla.so")]
+    public static extern int GenerarAleatorio(int semilla);
+
+    static void Main()
+    {
+        Console.Write("Introduce una semilla: ");
+        int semilla = int.Parse(Console.ReadLine());
+
+        Console.Write("¿Cuántos números aleatorios deseas generar? ");
+        int cantidad = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Números aleatorios generados:");
+        for (int i = 0; i < cantidad; i++)
+        {
+            semilla = GenerarAleatorio(semilla);  // Actualiza la semilla para el siguiente número
+            Console.WriteLine(semilla);
+        }
+    }
+}
+*/
 .global GenerarAleatorio
 
 GenerarAleatorio:
