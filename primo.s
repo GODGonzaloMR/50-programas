@@ -1,3 +1,34 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que verifica si un número es primo
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+
+class Program
+{
+    // Importar función de verificación de número primo desde la biblioteca compartida
+    [DllImport("libcalculations.so")]
+    public static extern bool es_primo(long n);  // Importación de la función es_primo
+
+    static void Main()
+    {
+        // Verificar si un número es primo
+        Console.Write("Ingresa un número para verificar si es primo: ");
+        if (long.TryParse(Console.ReadLine(), out long numero) && numero >= 2)
+        {
+            bool resultado = es_primo(numero);
+            Console.WriteLine(resultado ? $"{numero} es primo." : $"{numero} no es primo.");
+        }
+        else
+        {
+            Console.WriteLine("Entrada no válida. Debe ser un número entero mayor o igual a 2.");
+        }
+    }
+}
+*/
 .section .data
 .section .text
 .global es_primo
