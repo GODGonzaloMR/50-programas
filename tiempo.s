@@ -1,3 +1,60 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que Mide el tiempo de ejecución de una función
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+using System.Diagnostics;
+
+class Program
+{
+    [DllImport("tiempo.so")]
+    public static extern ulong FuncionDePrueba(ulong iteraciones);
+
+    static void Main()
+    {
+        try
+        {
+            Console.Write("Introduce el número de iteraciones: ");
+            if (ulong.TryParse(Console.ReadLine(), out ulong iteraciones))
+            {
+                // Crear el cronómetro
+                Stopwatch cronometro = new Stopwatch();
+
+                // Calentar la CPU (opcional)
+                FuncionDePrueba(1000);
+                
+                Console.WriteLine("\nIniciando medición de tiempo...");
+                
+                // Iniciar medición
+                cronometro.Start();
+                
+                // Llamar a la función
+                ulong resultado = FuncionDePrueba(iteraciones);
+                
+                // Detener medición
+                cronometro.Stop();
+
+                // Mostrar resultados
+                Console.WriteLine($"\nResultados de la medición:");
+                Console.WriteLine($"Tiempo transcurrido: {cronometro.ElapsedMilliseconds} ms");
+                Console.WriteLine($"Tiempo por iteración: {(double)cronometro.ElapsedTicks / iteraciones:F6} ticks");
+                Console.WriteLine($"Resultado del cálculo: {resultado}");
+            }
+            else
+            {
+                Console.WriteLine("Por favor, ingresa un número válido.");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+    }
+}
+*/
 .global FuncionDePrueba
 
 // Función de prueba que realiza operaciones matemáticas en un bucle
