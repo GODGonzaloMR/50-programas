@@ -1,3 +1,50 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que hace Rotación de un arreglo (izquierda/derecha)
+
+// Equivalente en C#:
+/*
+// rotacion.cs - C# para invocar el ensamblador ARM64 y rotar los elementos de un arreglo
+using System;
+using System.Runtime.InteropServices;
+
+class Program
+{
+    // Importar la función rotar_arreglo desde el archivo ensamblador
+    [DllImport("rotacion.so", EntryPoint = "rotar_arreglo")]
+    private static extern void RotarArreglo(long[] arreglo, long tamaño, long posiciones, long direccion);
+
+    static void Main()
+    {
+        Console.WriteLine("Introduce el número de elementos en el arreglo:");
+        int n = Convert.ToInt32(Console.ReadLine());
+        long[] arreglo = new long[n];
+
+        Console.WriteLine("Introduce los elementos del arreglo:");
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write($"Elemento {i + 1}: ");
+            arreglo[i] = Convert.ToInt64(Console.ReadLine());
+        }
+
+        Console.Write("Introduce el número de posiciones para rotar: ");
+        long posiciones = Convert.ToInt64(Console.ReadLine());
+
+        Console.Write("Dirección de rotación (0 = izquierda, 1 = derecha): ");
+        long direccion = Convert.ToInt64(Console.ReadLine());
+
+        // Llamar a la función de ensamblador para rotar el arreglo
+        RotarArreglo(arreglo, n, posiciones, direccion);
+
+        Console.WriteLine("Arreglo después de la rotación:");
+        foreach (long elemento in arreglo)
+        {
+            Console.Write(elemento + " ");
+        }
+        Console.WriteLine();
+    }
+}
+*/
 // rotacion.s - Ensamblador ARM64 para rotar los elementos de un arreglo
 
 .global rotar_arreglo
