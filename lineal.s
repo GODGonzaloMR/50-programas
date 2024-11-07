@@ -1,3 +1,51 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que hace una Función para realizar una búsqueda lineal en un arreglo
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+
+class Program
+{
+    // Importar la función de búsqueda lineal desde la biblioteca compartida
+    [DllImport("libcalculations.so")]
+    public static extern int busqueda_lineal(int[] arr, int n, int valor);
+
+    static void Main()
+    {
+        // Definir un arreglo de ejemplo
+        Console.Write("Ingresa la cantidad de elementos en el arreglo: ");
+        int n = int.Parse(Console.ReadLine());
+        int[] arreglo = new int[n];
+
+        // Rellenar el arreglo con valores del usuario
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write($"Elemento {i + 1}: ");
+            arreglo[i] = int.Parse(Console.ReadLine());
+        }
+
+        // Pedir el valor a buscar
+        Console.Write("Ingresa el valor a buscar en el arreglo: ");
+        int valor = int.Parse(Console.ReadLine());
+
+        // Llamar a la función para realizar la búsqueda lineal
+        int indice = busqueda_lineal(arreglo, arreglo.Length, valor);
+
+        // Mostrar el resultado
+        if (indice >= 0)
+        {
+            Console.WriteLine($"El valor {valor} se encuentra en el índice {indice}.");
+        }
+        else
+        {
+            Console.WriteLine($"El valor {valor} no se encuentra en el arreglo.");
+        }
+    }
+}
+*/
 .section .data
 .section .text
 .global busqueda_lineal
