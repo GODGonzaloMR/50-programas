@@ -1,3 +1,40 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que encuentra el mínimo en un arreglo
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+
+class Program
+{
+    // Importar la función de encontrar el mínimo desde la biblioteca compartida
+    [DllImport("libcalculations.so")]
+    public static extern int encontrar_minimo(int[] arr, int n);
+
+    static void Main()
+    {
+        // Definir un arreglo de ejemplo
+        Console.Write("Ingresa la cantidad de elementos en el arreglo: ");
+        int n = int.Parse(Console.ReadLine());
+        int[] arreglo = new int[n];
+
+        // Rellenar el arreglo con valores del usuario
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write($"Elemento {i + 1}: ");
+            arreglo[i] = int.Parse(Console.ReadLine());
+        }
+
+        // Llamar a la función para encontrar el mínimo en el arreglo
+        int minimo = encontrar_minimo(arreglo, arreglo.Length);
+
+        // Mostrar el valor mínimo
+        Console.WriteLine($"El valor mínimo en el arreglo es: {minimo}");
+    }
+}
+*/
 .section .data
 .section .text
 .global encontrar_minimo
