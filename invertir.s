@@ -1,3 +1,44 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que invierte los elementos de un arreglo
+
+// Equivalente en C#:
+/*
+// invertir.cs - C# para invocar el ensamblador ARM64 y invertir los elementos de un arreglo
+using System;
+using System.Runtime.InteropServices;
+
+class Program
+{
+    // Importar la función invertir_arreglo desde el archivo ensamblador
+    [DllImport("invertir.so", EntryPoint = "invertir_arreglo")]
+    private static extern void InvertirArreglo(long[] arreglo, long tamaño);
+
+    static void Main()
+    {
+        Console.WriteLine("Introduce el número de elementos en el arreglo:");
+        int n = Convert.ToInt32(Console.ReadLine());
+        long[] arreglo = new long[n];
+
+        Console.WriteLine("Introduce los elementos del arreglo:");
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write($"Elemento {i + 1}: ");
+            arreglo[i] = Convert.ToInt64(Console.ReadLine());
+        }
+
+        // Llamar a la función de ensamblador para invertir el arreglo
+        InvertirArreglo(arreglo, n);
+
+        Console.WriteLine("Arreglo invertido:");
+        foreach (long elemento in arreglo)
+        {
+            Console.Write(elemento + " ");
+        }
+        Console.WriteLine();
+    }
+}
+*/
 // invertir.s - Ensamblador ARM64 para invertir los elementos de un arreglo
 
 .global invertir_arreglo
