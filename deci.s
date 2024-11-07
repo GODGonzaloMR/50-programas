@@ -1,3 +1,108 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que convierte de decimal a hexadecimal
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+using System.Text;
+
+class Program
+{
+    [DllImport("deci.so", EntryPoint = "decimal_to_hex")]
+    private static extern void DecimalToHex(long number);
+
+    [DllImport("deci.so", EntryPoint = "get_hex_char")]
+    private static extern char GetHexChar(int index);
+
+    [DllImport("deci.so", EntryPoint = "get_length")]
+    private static extern int GetLength();
+
+    static string GetHexString(long number)
+    {
+        DecimalToHex(number);
+        int length = GetLength();
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < length; i++)
+        {
+            result.Append(GetHexChar(i));
+        }
+
+        return result.ToString();
+    }
+
+    static void Main()
+    {
+        while (true)
+        {
+            Console.WriteLine("\nConversor de Decimal a Hexadecimal");
+            Console.WriteLine("1. Convertir número");
+            Console.WriteLine("2. Ver tabla de conversión (0-15)");
+            Console.WriteLine("0. Salir");
+            Console.Write("Seleccione una opción: ");
+
+            if (int.TryParse(Console.ReadLine(), out int opcion))
+            {
+                switch (opcion)
+                {
+                    case 1:
+                        Console.Write("\nIngrese un número decimal positivo: ");
+                        if (long.TryParse(Console.ReadLine(), out long numero))
+                        {
+                            if (numero < 0)
+                            {
+                                Console.WriteLine("Por favor, ingrese un número positivo.");
+                                break;
+                            }
+
+                            string hexadecimal = GetHexString(numero);
+                            Console.WriteLine($"\nNúmero decimal: {numero}");
+                            Console.WriteLine($"Número hexadecimal: 0x{hexadecimal}");
+                            
+                            // Información adicional
+                            Console.WriteLine($"Longitud: {hexadecimal.Length} dígitos");
+                            if (hexadecimal.Length > 0)
+                            {
+                                Console.WriteLine($"Dígito más significativo: {hexadecimal[0]}");
+                                Console.WriteLine($"Dígito menos significativo: {hexadecimal[hexadecimal.Length - 1]}");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Error: Ingrese un número válido.");
+                        }
+                        break;
+
+                    case 2:
+                        Console.WriteLine("\nTabla de conversión (0-15):");
+                        Console.WriteLine("Decimal -> Hexadecimal");
+                        Console.WriteLine("--------------------");
+                        for (int i = 0; i <= 15; i++)
+                        {
+                            string hex = GetHexString(i);
+                            Console.WriteLine($"{i,7} -> 0x{hex}");
+                        }
+                        break;
+
+                    case 0:
+                        Console.WriteLine("Saliendo del programa...");
+                        return;
+
+                    default:
+                        Console.WriteLine("Opción no válida.");
+                        break;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Error: Ingrese un número válido.");
+            }
+        }
+    }
+}
+*/
 .data
     .align 3
     hex_array: .skip 32         // Buffer para almacenar resultado hexadecimal
