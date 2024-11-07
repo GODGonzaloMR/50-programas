@@ -1,3 +1,28 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que calcula la longitud de una cadena
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+
+class Cad
+{
+    [DllImport("libcalculations.so", CallingConvention = CallingConvention.Cdecl)]
+    public static extern long longitud_cadena(byte[] cadena);
+
+    static void Main()
+    {
+        Console.WriteLine("Ingrese una cadena: ");
+        string input = Console.ReadLine();
+        byte[] cadena = System.Text.Encoding.ASCII.GetBytes(input + '\0'); // Agregar terminador nulo
+
+        long longitud = longitud_cadena(cadena);
+        Console.WriteLine($"La longitud de la cadena es: {longitud}");
+    }
+}
+*/
 .global longitud_cadena
 
 .section .text
