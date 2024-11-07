@@ -1,3 +1,92 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que convierte de binario a decimal
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
+
+class Program
+{
+    [DllImport("binario.so", EntryPoint = "binary_to_decimal")]
+    private static extern long BinaryToDecimal(string binary);
+
+    [DllImport("binario.so", EntryPoint = "get_error")]
+    private static extern int GetError();
+
+    static void Main()
+    {
+        while (true)
+        {
+            Console.WriteLine("\nConversor de Binario a Decimal");
+            Console.WriteLine("1. Convertir número binario");
+            Console.WriteLine("0. Salir");
+            Console.Write("Seleccione una opción: ");
+
+            if (int.TryParse(Console.ReadLine(), out int opcion))
+            {
+                switch (opcion)
+                {
+                    case 1:
+                        Console.Write("\nIngrese un número binario (solo 0s y 1s): ");
+                        string entrada = Console.ReadLine()?.Trim();
+
+                        if (string.IsNullOrEmpty(entrada))
+                        {
+                            Console.WriteLine("Error: Entrada vacía.");
+                            break;
+                        }
+
+                        // Verificar longitud máxima (64 bits)
+                        if (entrada.Length > 64)
+                        {
+                            Console.WriteLine("Error: El número binario no puede tener más de 64 dígitos.");
+                            break;
+                        }
+
+                        // Verificar que solo contenga 0s y 1s
+                        if (!Regex.IsMatch(entrada, "^[01]+$"))
+                        {
+                            Console.WriteLine("Error: El número debe contener solo 0s y 1s.");
+                            break;
+                        }
+
+                        long resultado = BinaryToDecimal(entrada);
+                        
+                        if (GetError() != 0 || resultado == -1)
+                        {
+                            Console.WriteLine("Error al convertir el número.");
+                            break;
+                        }
+
+                        Console.WriteLine($"\nNúmero binario: {entrada}");
+                        Console.WriteLine($"Número decimal: {resultado}");
+                        
+                        // Mostrar información adicional
+                        Console.WriteLine($"Cantidad de bits: {entrada.Length}");
+                        Console.WriteLine($"Primer bit (MSB): {entrada[0]}");
+                        Console.WriteLine($"Último bit (LSB): {entrada[entrada.Length - 1]}");
+                        break;
+
+                    case 0:
+                        Console.WriteLine("Saliendo del programa...");
+                        return;
+
+                    default:
+                        Console.WriteLine("Opción no válida.");
+                        break;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Error: Ingrese un número válido.");
+            }
+        }
+    }
+}
+*/
 .data
     .align 3
     error_flag: .word 0        // Flag para indicar error en la entrada
