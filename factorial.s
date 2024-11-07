@@ -1,3 +1,68 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que da el factorial de un número
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+
+class Program
+{
+    [DllImport("libcalculations.so")]
+    public static extern long factorial(long n);
+
+    static void MostrarFactorial(long n)
+    {
+        Console.Write($"{n}! = ");
+        
+        // Mostrar el proceso
+        for (long i = n; i >= 1; i--)
+        {
+            Console.Write(i);
+            if (i > 1)
+                Console.Write(" × ");
+        }
+        
+        // Calcular y mostrar el resultado
+        long resultado = factorial(n);
+        Console.WriteLine($" = {resultado}");
+    }
+
+    static void Main()
+    {
+        while (true)
+        {
+            Console.Write("\nIngresa un número para calcular su factorial (0-20, o -1 para salir): ");
+            
+            if (long.TryParse(Console.ReadLine(), out long n))
+            {
+                if (n == -1) break;
+                
+                if (n >= 0 && n <= 20)
+                {
+                    try
+                    {
+                        MostrarFactorial(n);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine($"Error: {e.Message}");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Por favor ingresa un número entre 0 y 20.");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Entrada no válida.");
+            }
+        }
+    }
+}
+*/
 .section .data
 .section .text
 .global factorial
