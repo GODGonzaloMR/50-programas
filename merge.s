@@ -4,6 +4,7 @@
 
 // Equivalente en C#:
 /*
+
 using System;
 using System.Runtime.InteropServices;
 
@@ -40,6 +41,7 @@ class Program
         Console.WriteLine();
     }
 }
+
 */
 .section .data
 .section .text
