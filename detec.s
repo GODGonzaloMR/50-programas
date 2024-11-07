@@ -1,3 +1,48 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que detecta desbordamiento en suma
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+
+class Program
+{
+    [DllImport("detec.so")]
+    public static extern int DetectOverflow(int a, int b);
+
+    static void Main()
+    {
+        try
+        {
+            Console.WriteLine("Introduce dos números para sumar:");
+            
+            Console.Write("Número 1: ");
+            int num1 = int.Parse(Console.ReadLine());
+            
+            Console.Write("Número 2: ");
+            int num2 = int.Parse(Console.ReadLine());
+
+            int result = DetectOverflow(num1, num2);
+            
+            if (result == 1)
+            {
+                Console.WriteLine("¡Desbordamiento detectado en la suma!");
+                Console.WriteLine($"La suma de {num1} + {num2} excede el rango de int32.");
+            }
+            else
+            {
+                Console.WriteLine($"No hay desbordamiento. La suma es: {num1 + num2}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+    }
+}
+*/
 .global DetectOverflow
 
 // Función para detectar desbordamiento en suma
