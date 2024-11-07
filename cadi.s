@@ -1,3 +1,53 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que encuentra el prefijo común más largo en cadenas
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+
+class Program
+{
+    [DllImport("cadena.so")]
+    public static extern int LongestCommonPrefix(string str1, string str2);
+
+    public static string FindLongestCommonPrefix(string[] strings)
+    {
+        if (strings.Length == 0)
+            return "";
+
+        string prefix = strings[0];
+
+        for (int i = 1; i < strings.Length; i++)
+        {
+            int commonLength = LongestCommonPrefix(prefix, strings[i]);
+            prefix = prefix.Substring(0, commonLength);
+
+            if (prefix == "")
+                break;
+        }
+
+        return prefix;
+    }
+
+    static void Main()
+    {
+        Console.WriteLine("Introduce el número de cadenas:");
+        int n = int.Parse(Console.ReadLine());
+
+        string[] strings = new string[n];
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write($"Cadena {i + 1}: ");
+            strings[i] = Console.ReadLine();
+        }
+
+        string longestPrefix = FindLongestCommonPrefix(strings);
+        Console.WriteLine("El prefijo común más largo es: " + longestPrefix);
+    }
+}
+*/
 .global LongestCommonPrefix
 
 // Función para encontrar el prefijo común más largo
