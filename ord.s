@@ -1,3 +1,42 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que hace un ordenamineto por selección
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+
+class Program
+{
+    [DllImport("libcalculations.so")]
+    public static extern void ordenamiento_seleccion(int[] arr, int n);
+
+    static void Main()
+    {
+        Console.Write("Ingresa la cantidad de elementos en el arreglo: ");
+        int n = int.Parse(Console.ReadLine());
+        int[] arreglo = new int[n];
+
+        Console.WriteLine("Ingresa los elementos:");
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write($"Elemento {i + 1}: ");
+            arreglo[i] = int.Parse(Console.ReadLine());
+        }
+
+        // Llamar a la función para ordenar el arreglo
+        ordenamiento_seleccion(arreglo, n);
+
+        Console.WriteLine("Arreglo ordenado:");
+        foreach (int num in arreglo)
+        {
+            Console.Write(num + " ");
+        }
+        Console.WriteLine();
+    }
+}
+*/
 .section .data
 .section .text
 .global ordenamiento_seleccion
