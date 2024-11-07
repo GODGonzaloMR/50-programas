@@ -1,3 +1,97 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que convierte de decimal a binario
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+using System.Text;
+
+class Program
+{
+    [DllImport("convertir.so", EntryPoint = "decimal_to_binary")]
+    private static extern void DecimalToBinary(long number);
+
+    [DllImport("convertir.so", EntryPoint = "get_bit")]
+    private static extern long GetBit(int index);
+
+    [DllImport("convertir.so", EntryPoint = "get_size")]
+    private static extern int GetSize();
+
+    static string GetBinaryString(long number)
+    {
+        DecimalToBinary(number);
+        int size = GetSize();
+        StringBuilder result = new StringBuilder();
+
+        // Construir el string binario desde el último bit hasta el primero
+        for (int i = size - 1; i >= 0; i--)
+        {
+            result.Append(GetBit(i));
+        }
+
+        return result.ToString();
+    }
+
+    static void Main()
+    {
+        while (true)
+        {
+            Console.WriteLine("\nConversor de Decimal a Binario");
+            Console.WriteLine("1. Convertir número");
+            Console.WriteLine("0. Salir");
+            Console.Write("Seleccione una opción: ");
+
+            if (int.TryParse(Console.ReadLine(), out int opcion))
+            {
+                switch (opcion)
+                {
+                    case 1:
+                        Console.Write("\nIngrese un número decimal (0-9223372036854775807): ");
+                        if (long.TryParse(Console.ReadLine(), out long numero))
+                        {
+                            if (numero < 0)
+                            {
+                                Console.WriteLine("Por favor, ingrese un número positivo.");
+                                break;
+                            }
+
+                            string binario = GetBinaryString(numero);
+                            Console.WriteLine($"\nNúmero decimal: {numero}");
+                            Console.WriteLine($"Número binario: {binario}");
+                            
+                            // Mostrar información adicional
+                            Console.WriteLine($"Cantidad de bits: {binario.Length}");
+                            if (binario.Length > 0)
+                            {
+                                Console.WriteLine($"Bit más significativo: {binario[0]}");
+                                Console.WriteLine($"Bit menos significativo: {binario[binario.Length - 1]}");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Error: Ingrese un número válido.");
+                        }
+                        break;
+
+                    case 0:
+                        Console.WriteLine("Saliendo del programa...");
+                        return;
+
+                    default:
+                        Console.WriteLine("Opción no válida.");
+                        break;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Error: Ingrese un número válido.");
+            }
+        }
+    }
+}
+*/
 .data
     .align 3
     binary_array: .skip 64      // Espacio para 64 bits (suficiente para un long)
