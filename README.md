@@ -1,6 +1,17 @@
 # 50-programas Gonzalo Cortez Huerta 22210761
+### Programas del 1 al 10 
+- https://asciinema.org/a/687451
+### Programas del 11 al 20
+- https://asciinema.org/a/687486
+### Programas del 21 al 30
+- https://asciinema.org/a/x9nhXCHoGg9FrOxbf8lzUVjR1
+### Programas del 31 al 40
+- https://asciinema.org/a/687493
+### Programas del 41 al 50
+- https://asciinema.org/a/687494
+  
 # Gist con los 50 programas https://gist.github.com/GODGonzaloMR/9f0602596ec4ad1c6d638a1ca091516d
-- Gonzalo Cortez Huerta 22210761
+
 # 1.- Convertir temperatura de Celsius a Fahrenheit	
 ## nano celsius_a_fahrenheit.s
 
