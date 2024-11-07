@@ -1,3 +1,46 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que hace un ordenamiento por mezcla (Meger Sort)
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+
+class Program
+{
+    // Importar la función de ordenamiento por mezcla desde la biblioteca compartida
+    [DllImport("libcalculations.so")]
+    public static extern void merge_sort(int[] arr, int n);
+
+    static void Main()
+    {
+        // Solicitar el tamaño del arreglo
+        Console.Write("Ingresa la cantidad de elementos en el arreglo: ");
+        int n = int.Parse(Console.ReadLine());
+        int[] arreglo = new int[n];
+
+        // Rellenar el arreglo con valores proporcionados por el usuario
+        Console.WriteLine("Ingresa los elementos:");
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write($"Elemento {i + 1}: ");
+            arreglo[i] = int.Parse(Console.ReadLine());
+        }
+
+        // Llamar a la función para ordenar el arreglo
+        merge_sort(arreglo, arreglo.Length);
+
+        // Mostrar el arreglo ordenado
+        Console.WriteLine("Arreglo ordenado:");
+        foreach (int num in arreglo)
+        {
+            Console.Write(num + " ");
+        }
+        Console.WriteLine();
+    }
+}
+*/
 .section .data
 .section .text
 .global merge_sort
