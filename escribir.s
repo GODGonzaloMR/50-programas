@@ -1,3 +1,32 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que permite Escribir en un archivo
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+
+class Program
+{
+    [DllImport("escribir.so", CallingConvention = CallingConvention.Cdecl)]
+    public static extern void EscribirArchivo(long numero);
+
+    static void Main()
+    {
+        Console.WriteLine("Introduce un número para escribir en el archivo:");
+        if (long.TryParse(Console.ReadLine(), out long numero))
+        {
+            EscribirArchivo(numero);
+            Console.WriteLine($"El número {numero} ha sido escrito en salida.txt");
+        }
+        else
+        {
+            Console.WriteLine("Error: Entrada inválida");
+        }
+    }
+}
+*/
 .global EscribirArchivo
 
 EscribirArchivo:
