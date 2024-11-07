@@ -1,3 +1,32 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que calcula  Mínimo Común Múltiplo (MCM)
+
+// Equivalente en C#:
+/*
+// mcm.cs - C# para invocar el ensamblador ARM64 y calcular el MCM
+using System;
+using System.Runtime.InteropServices;
+
+class Program
+{
+    // Importar la función mcm desde el archivo ensamblador
+    [DllImport("mcm.so", EntryPoint = "mcm")]
+    private static extern long MCM(long a, long b);
+
+    static void Main()
+    {
+        Console.WriteLine("Introduce dos números:");
+        Console.Write("a: ");
+        long a = Convert.ToInt64(Console.ReadLine());
+        Console.Write("b: ");
+        long b = Convert.ToInt64(Console.ReadLine());
+
+        long result = MCM(a, b);
+        Console.WriteLine($"El MCM de {a} y {b} es: {result}");
+    }
+}
+*/
 // mcm.s - Ensamblador ARM64 para calcular el MCM
 
 .global mcm
