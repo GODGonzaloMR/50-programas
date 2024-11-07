@@ -1,3 +1,43 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que covierte emteros a hexadecimal
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+
+class Entero
+{
+    // Declaración de la función en la biblioteca compartida
+    [DllImport("libcalculations.so")]
+    public static extern void entero_a_ascii(long numero, byte[] buffer, int baseNum);
+
+    static void Main()
+    {
+        Console.Write("Ingrese el número entero a convertir: ");
+        long numero = Convert.ToInt64(Console.ReadLine());
+
+        Console.Write("Ingrese la base (por ejemplo, 10 para decimal, 16 para hexadecimal): ");
+        int baseNum = Convert.ToInt32(Console.ReadLine());
+
+        // Crear un buffer suficientemente grande para almacenar el resultado ASCII
+        byte[] buffer = new byte[20];
+
+        // Llamar a la función ensambladora para convertir el número
+        entero_a_ascii(numero, buffer, baseNum);
+
+        // Buscar el índice del byte nulo (0) para evitar errores de conversión
+        int nullIndex = Array.IndexOf(buffer, (byte)0);
+        if (nullIndex == -1) nullIndex = buffer.Length;  // Si no hay byte nulo, usa toda la longitud
+
+        // Convertir el buffer de bytes a una cadena en C#, solo hasta el byte nulo
+        string resultado = System.Text.Encoding.ASCII.GetString(buffer, 0, nullIndex);
+        
+        Console.WriteLine($"El número {numero} en base {baseNum} es: {resultado}");
+    }
+}
+*/
 .global entero_a_ascii
 entero_a_ascii:
     mov x3, x0          // x3 = número a convertir
