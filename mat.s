@@ -1,3 +1,60 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que hace una multriplicación de matrices
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+
+public class Mat
+{
+    [DllImport("libcalculations.so", CallingConvention = CallingConvention.Cdecl)]
+    public static extern void multiplicar_matrices(int[] A, int[] B, int[] C, int rowsA, int colsA, int colsB);
+
+    public static void Main()
+    {
+        int rowsA = 2, colsA = 3, colsB = 2;
+        
+        int[] A = new int[rowsA * colsA];
+        int[] B = new int[colsA * colsB];
+        int[] C = new int[rowsA * colsB];
+
+        Console.WriteLine("Ingrese los elementos de la matriz A:");
+        for (int i = 0; i < rowsA; i++)
+        {
+            for (int j = 0; j < colsA; j++)
+            {
+                Console.Write($"Elemento A[{i},{j}]: ");
+                A[i * colsA + j] = int.Parse(Console.ReadLine());
+            }
+        }
+
+        Console.WriteLine("Ingrese los elementos de la matriz B:");
+        for (int i = 0; i < colsA; i++)
+        {
+            for (int j = 0; j < colsB; j++)
+            {
+                Console.Write($"Elemento B[{i},{j}]: ");
+                B[i * colsB + j] = int.Parse(Console.ReadLine());
+            }
+        }
+
+        // Llamar a la función de multiplicación de matrices
+        multiplicar_matrices(A, B, C, rowsA, colsA, colsB);
+
+        Console.WriteLine("Resultado de la multiplicación de matrices C:");
+        for (int i = 0; i < rowsA; i++)
+        {
+            for (int j = 0; j < colsB; j++)
+            {
+                Console.Write(C[i * colsB + j] + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+*/
 .section .text
 .global multiplicar_matrices
 
