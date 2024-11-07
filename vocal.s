@@ -1,3 +1,33 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que cuenta las vocales y consonantes
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+
+class ConvertidorVocales
+{
+    // Declaración de la función en ensamblador
+    [DllImport("libcalculations.so")]
+    public static extern void contar_vocales_consonantes(byte[] cadena, out long vocales, out long consonantes);
+
+    static void Main()
+    {
+        Console.WriteLine("Ingrese una cadena: ");
+        string input = Console.ReadLine();
+
+        // Convertir la cadena a un arreglo de bytes
+        byte[] cadena = System.Text.Encoding.ASCII.GetBytes(input + '\0'); // Agregar terminador nulo
+
+        long vocales, consonantes;
+        contar_vocales_consonantes(cadena, out vocales, out consonantes);
+
+        Console.WriteLine($"Vocales: {vocales}, Consonantes: {consonantes}");
+    }
+}
+*/
 .global contar_vocales_consonantes
 
 .section .text
