@@ -1,3 +1,67 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que hace una suma de matrices
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+
+class Matriz
+{
+    // Declaración de la función de suma de matrices
+    [DllImport("libcalculations.so")]
+    public static extern void suma_matrices(int[] A, int[] B, int[] C, long rows, long cols);
+
+    static void Main(string[] args)
+    {
+        // Definir el número de filas y columnas
+        long rows = 2; // Cambia esto al número de filas que necesites
+        long cols = 3; // Cambia esto al número de columnas que necesites
+
+        // Inicializar las matrices A y B
+        int[] A = new int[rows * cols];
+        int[] B = new int[rows * cols];
+        int[] C = new int[rows * cols]; // Matriz para almacenar el resultado
+
+        // Leer los elementos de la matriz A
+         Console.WriteLine("Ingrese los elementos de la matriz A:");
+        for (long i = 0; i < rows; i++)
+        {
+            for (long j = 0; j < cols; j++)
+            {
+                Console.Write($"Elemento A[{i},{j}]: ");
+                A[i * cols + j] = int.Parse(Console.ReadLine());
+            }
+        }
+
+        // Leer los elementos de la matriz B
+        Console.WriteLine("Ingrese los elementos de la matriz B:");
+        for (long i = 0; i < rows; i++)
+        {
+            for (long j = 0; j < cols; j++)
+            {
+                Console.Write($"Elemento B[{i},{j}]: ");
+                B[i * cols + j] = int.Parse(Console.ReadLine());
+            }
+        }
+
+        // Llamar a la función de suma de matrices
+        suma_matrices(A, B, C, rows, cols);
+
+        // Mostrar la matriz resultante C
+        Console.WriteLine("La matriz resultante C (A + B) es:");
+        for (long i = 0; i < rows; i++)
+        {
+            for (long j = 0; j < cols; j++)
+            {
+                Console.Write(C[i * cols + j] + "\t");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+*/
 .section .text
 .global suma_matrices
 
