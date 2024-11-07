@@ -1,3 +1,40 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que encuentra el máximo en un arreglo
+
+// Equivalente en C#:
+/*
+using System;
+using System.Runtime.InteropServices;
+
+class Program
+{
+    // Importar la función de encontrar el máximo desde la biblioteca compartida
+    [DllImport("libcalculations.so")]
+    public static extern int encontrar_maximo(int[] arr, int n);
+
+    static void Main()
+    {
+        // Definir un arreglo de ejemplo
+        Console.Write("Ingresa la cantidad de elementos en el arreglo: ");
+        int n = int.Parse(Console.ReadLine());
+        int[] arreglo = new int[n];
+
+        // Rellenar el arreglo con valores del usuario
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write($"Elemento {i + 1}: ");
+            arreglo[i] = int.Parse(Console.ReadLine());
+        }
+
+        // Llamar a la función para encontrar el máximo en el arreglo
+        int maximo = encontrar_maximo(arreglo, arreglo.Length);
+
+        // Mostrar el valor máximo
+        Console.WriteLine($"El valor máximo en el arreglo es: {maximo}");
+    }
+}
+*/
 .section .data
 .section .text
 .global encontrar_maximo
