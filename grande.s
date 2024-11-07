@@ -1,3 +1,46 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que Encuentra el segundo elemento más grande
+
+// Equivalente en C#:
+/*
+// grande.cs - C# para invocar el ensamblador ARM64 y encontrar el segundo elemento más grande
+using System;
+using System.Runtime.InteropServices;
+
+class Program
+{
+    // Importar la función segundo_mas_grande desde el archivo ensamblador
+    [DllImport("grande.so", EntryPoint = "segundo_mas_grande")]
+    private static extern long SegundoMasGrande(long[] arreglo, long tamaño);
+
+    static void Main()
+    {
+        Console.WriteLine("Introduce el número de elementos en el arreglo:");
+        int n = Convert.ToInt32(Console.ReadLine());
+        long[] arreglo = new long[n];
+
+        Console.WriteLine("Introduce los elementos del arreglo:");
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write($"Elemento {i + 1}: ");
+            arreglo[i] = Convert.ToInt64(Console.ReadLine());
+        }
+
+        // Llamar a la función de ensamblador para encontrar el segundo elemento más grande
+        long segundoMayor = SegundoMasGrande(arreglo, n);
+
+        if (segundoMayor == -1)
+        {
+            Console.WriteLine("No se encontró un segundo elemento más grande.");
+        }
+        else
+        {
+            Console.WriteLine($"El segundo elemento más grande es: {segundoMayor}");
+        }
+    }
+}
+*/
 // grande.s - Ensamblador ARM64 para encontrar el segundo elemento más grande en un arreglo
 
 .global segundo_mas_grande
