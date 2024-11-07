@@ -1,3 +1,37 @@
+// Autor: Cortez Huerta Gonzalo
+// Fecha: 05/11/2024
+// Descripción: Programa en ensamblador que suma los elementos de un arreglo
+
+// Equivalente en C#:
+/*
+// arreglo.cs - C# para invocar el ensamblador ARM64 y calcular la suma de un arreglo
+using System;
+using System.Runtime.InteropServices;
+
+class Program
+{
+    // Importar la función suma_arreglo desde el archivo ensamblador
+    [DllImport("arreglo.so", EntryPoint = "suma_arreglo")]
+    private static extern long SumaArreglo(long[] arreglo, long tamaño);
+
+    static void Main()
+    {
+        Console.WriteLine("Introduce el número de elementos en el arreglo:");
+        int n = Convert.ToInt32(Console.ReadLine());
+        long[] arreglo = new long[n];
+
+        Console.WriteLine("Introduce los elementos del arreglo:");
+        for (int i = 0; i < n; i++)
+        {
+            Console.Write($"Elemento {i + 1}: ");
+            arreglo[i] = Convert.ToInt64(Console.ReadLine());
+        }
+
+        long suma = SumaArreglo(arreglo, n);
+        Console.WriteLine($"La suma de los elementos del arreglo es: {suma}");
+    }
+}
+*/
 // arreglo.s - Ensamblador ARM64 para sumar los elementos de un arreglo
 
 .global suma_arreglo
