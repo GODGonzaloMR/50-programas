@@ -1,5 +1,5 @@
 // Este es el menu que organiza todos los codigos para poder correrlos
-
+/*
 #include <stdio.h>
 
 // Declaraciones de las funciones en ensamblador
@@ -162,3 +162,4 @@ int main() {
 
     return 0;
 }
+*/
